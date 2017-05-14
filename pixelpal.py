@@ -54,6 +54,6 @@ if __name__ == '__main__':
     bit = PixelPal()
     while True:
         try:
-            bit.toggle()
+            time.sleep(60)
         except KeyboardInterrupt:
             bit.error()
