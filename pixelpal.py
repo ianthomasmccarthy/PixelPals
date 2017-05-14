@@ -8,13 +8,13 @@ class PixelPal(object):
         self.state = False
         self.setup_gpio()
         self.toggle()
-	
+
 
     def setup_gpio(self):
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pixel_pal_pin, GPIO.OUT, initial=0)
         self.state = False
-        
+
     def _off(self):
         GPIO.output(self.pixel_pal_pin, 0)
         self.state = False
@@ -54,7 +54,6 @@ if __name__ == '__main__':
     bit = PixelPal()
     while True:
         try:
-            time.sleep(30)
             bit.toggle()
         except KeyboardInterrupt:
             bit.error()
