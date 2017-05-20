@@ -1,0 +1,19 @@
+#!/bin/bash
+
+VENV_PYTHON = '/opt/pixelpal/venv/bin/python'
+SCRIPT = 'single_flask_server.py'
+
+start() {
+    ${VENV_PYTHON} /opt/pixelpal/${SCRIPT} --host=`/bin/hostname`
+    return 0
+}
+
+
+case "$1" in
+  start)
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start}"
+
+
