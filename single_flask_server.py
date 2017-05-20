@@ -1,33 +1,44 @@
 from flask import Flask
 from pixelpal import PixelPal
 
-app = Flask(__name__)
-pp = PixelPal()
 
-@app.route("/")
-def hello():
-    return "Hello World!"
 
-@app.route("/toggle")
-def toggle():
-    pp.toggle()
-    return 'Toggle'
+class test(object):
 
-@app.route('/on')
-def on():
-    if not pp.status:
-        pp.toggle()
-    return 'on'
+    def init(self):
+        self.app = Flask(__name__)
+        self.pp = PixelPal()
 
-@app.route('/off')
-def off():
-    if pp.status:
-        pp.toggle()
-    return 'off'
+    @self.app.route("/")
+    def hello(self):
+        return "Hello World!"
 
-@app.route('/status')
-def status():
-    return str(pp.status)
+
+    @self.app.route("/toggle")
+    def toggle(self):
+        self.pp.toggle()
+        return 'Toggle'
+
+
+    @self.app.route('/on')
+    def on(self):
+        if not self.pp.status:
+            self.pp.toggle()
+        return 'on'
+
+
+    @self.app.route('/off')
+    def off(self):
+        if self.pp.status:
+            self.pp.toggle()
+        return 'off'
+
+
+    @self.app.route('/status')
+    def status(self):
+        return str(self.pp.status)
 
 if __name__ == "__main__":
-    app.run()
+    t = test()
+
+    test.app.run()
