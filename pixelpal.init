@@ -1,10 +1,11 @@
 #!/bin/bash
 
-VENV_PYTHON='/opt/pixelpal/venv/bin/python'
+BASE='/opt/pixelpals/'
+VENV_PYTHON='${BASE}venv/bin/python'
 SCRIPT='single_flask_server.py'
 
 start() {
-    ${VENV_PYTHON} /opt/pixelpal/${SCRIPT} --host=`/bin/hostname`
+    ${VENV_PYTHON} ${BASE}${SCRIPT} --host=`/bin/hostname`
     return 0
 }
 
@@ -15,4 +16,4 @@ case "$1" in
     ;;
   *)
     echo "Usage: $0 {start}"
-    ;;
+esac
