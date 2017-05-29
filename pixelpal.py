@@ -28,6 +28,7 @@ class PixelPal(object):
             self._off()
         else:
             self._on()
+
     def error(self):
         if self.state:
             self._off()
