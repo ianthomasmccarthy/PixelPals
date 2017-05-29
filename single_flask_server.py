@@ -3,41 +3,40 @@ from pixelpal import PixelPal
 
 
 
-class test(object):
 
-    app = Flask(__name__)
-
-    def __init__(self):
-        self.pp = PixelPal()
-
-    @app.route("/")
-    def hello(self):
-        return "Hello World!"
+app = Flask(__name__)
 
 
-    @app.route("/toggle")
-    def toggle(self):
-        self.pp.toggle()
-        return 'Toggle'
+pp = PixelPal()
+
+@app.route("/")
+def hello(self):
+    return "Hello World!"
 
 
-    @app.route('/on')
-    def on(self):
-        if not self.pp.status:
-            self.pp.toggle()
-        return 'on'
+@app.route("/toggle")
+def toggle(self):
+    app.toggle()
+    return 'Toggle'
 
 
-    @app.route('/off')
-    def off(self):
-        if self.pp.status:
-            self.pp.toggle()
-        return 'off'
+@app.route('/on')
+def on(self):
+    if not pp.state:
+        pp.toggle()
+    return 'on'
 
 
-    @app.route('/status')
-    def status(self):
-        return str(self.pp.status)
+@app.route('/off')
+def off():
+    if pp.state:
+        pp.toggle()
+    return 'off'
+
+
+@app.route('/status')
+def status(self):
+    return str(pp.status)
 
 if __name__ == "__main__":
     t = test()
