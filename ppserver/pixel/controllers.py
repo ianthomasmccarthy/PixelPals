@@ -16,13 +16,13 @@ def index():
 @pixel.route('/on')
 def on():
     pp.on()
-    return 200
+    return "good"
 
 
 @pixel.route('/off')
 def off():
     pp.off()
-    return 200
+    return 'good'
 
 
 @pixel.route('/checkin')
@@ -33,4 +33,4 @@ def checkin():
 @pixel.route('/pixeltime/<int:mins>')
 def pixtime(mins):
     pixel_time.apply_async(args=[mins])
-    return 200
+    return 'good'
