@@ -1,4 +1,5 @@
 
+from ppserver import celery
 from celery import Celery
 import requests
 
