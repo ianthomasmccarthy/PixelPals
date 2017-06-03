@@ -1,0 +1,20 @@
+#!/bin/bash
+
+BASE='/opt/pixelpals/'
+VENV_PYTHON='${BASE}venv/bin/python'
+MODULE='ppserver.pixel.tasks'
+LOG='${BASE}logs/Celery.log'
+CELERY='${BASE}venv/bin/celery'
+
+start() {
+    ${VENV_PYTHON} ${CELERY} -A ${MODULE} worker --logfile ${LOG}
+    return 0
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start}"
+esac

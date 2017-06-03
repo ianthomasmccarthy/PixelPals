@@ -1,0 +1,19 @@
+#!/bin/bash
+
+BASE='/opt/redis/'
+CONFIG='${BASE}redis.conf'
+
+start() {
+    cd ${BASE}
+    ${BASE}src/redis_server ${CONFIG}
+    return 0
+    }
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start}"
+esac

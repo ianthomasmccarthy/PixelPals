@@ -1,14 +1,13 @@
 import RPi.GPIO as GPIO
 import time
-import os
+
 
 class PixelPal(object):
     def __init__(self):
-	self.pixel_pal_pin = 24
+        self.pixel_pal_pin = 24
         self.state = False
         self.setup_gpio()
         self.toggle()
-
 
     def setup_gpio(self):
         GPIO.setmode(GPIO.BCM)

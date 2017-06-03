@@ -9,6 +9,8 @@ celery.conf.update(app.config)
 
 from ppserver.pixel.controllers import pixel
 app.register_blueprint(pixel)
+from ppserver.pixel.models import PPFeedback
+pp = PPFeedback()
 
 
 import views

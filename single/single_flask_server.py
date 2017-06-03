@@ -1,13 +1,9 @@
 from flask import Flask
 from pixelpal import PixelPal
 
-
-
-
 app = Flask(__name__)
-
-
 pp = PixelPal()
+
 
 @app.route("/")
 def hello(self):
@@ -38,6 +34,6 @@ def off():
 def status(self):
     return str(pp.status)
 
-if __name__ == "__main__":
-    t = test()
-    test.app.run()
+
+if __name__ == '__main__':
+    app.run()
