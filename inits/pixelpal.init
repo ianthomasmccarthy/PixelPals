@@ -8,7 +8,7 @@ URL='https://192.168.1.11/pixel/checkin'
 
 start() {
     cd ${BASE}
-    nohup ${VENV_PYTHON} ${BASE}${SCRIPT} --host-name=`/bin/hostname` --log-file=${LOG} --url-checkin='https://192.168.1.11/pixel/checkin' 2>&1 /dev/null &
+    nohup ${VENV_PYTHON} ${BASE}${SCRIPT} --host-name=`/bin/hostname` --log-file=${LOG} --url-checkin='http://192.168.1.11/pixel/checkin' 2>&1 /dev/null &
     return 0
 }
 
