@@ -7,7 +7,6 @@ class PixelPal(object):
         self.pixel_pal_pin = 24
         self.state = False
         self.setup_gpio()
-        self.toggle()
 
     def setup_gpio(self):
         GPIO.setmode(GPIO.BCM)
