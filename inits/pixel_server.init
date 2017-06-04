@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASE='/opt/pixelpals/'
-VENV_PYTHON='${BASE}venv/bin/python'
+VENV_PYTHON=${BASE}'venv/bin/python'
 SCRIPT='run.py'
 
 start() {
