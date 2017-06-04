@@ -5,7 +5,7 @@ CONFIG='${BASE}redis.conf'
 
 start() {
     cd ${BASE}
-    nohup ${BASE}src/redis_server ${CONFIG}
+    ${BASE}src/redis-server ${CONFIG}
     return 0
     }
 
