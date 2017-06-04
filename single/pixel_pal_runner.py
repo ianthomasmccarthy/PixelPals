@@ -15,7 +15,7 @@ class PixelPalRunner(object):
     def __init__(self):
         # Default Values
         self.delay    = 20
-        self.url      = 'https://192.168.1.11/pixel/checkin'
+        self.url      = 'http://192.168.1.11/pixel/checkin'
         self.log_file = '/opt/pixelpals/logs/PixelPalRunner.log'
         self.pp       = PixelPal()
 
