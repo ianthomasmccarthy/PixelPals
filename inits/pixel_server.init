@@ -5,6 +5,7 @@ VENV_PYTHON='${BASE}venv/bin/python'
 SCRIPT='run.py'
 
 start() {
+    cd ${BASE}
     ${VENV_PYTHON} ${BASE}${SCRIPT}
     return 0
 }

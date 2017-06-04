@@ -7,6 +7,7 @@ LOG='${BASE}logs/Celery.log'
 CELERY='${BASE}venv/bin/celery'
 
 start() {
+    cd ${BASE}
     ${VENV_PYTHON} ${CELERY} -A ${MODULE} worker --logfile ${LOG}
     return 0
 }

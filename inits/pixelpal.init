@@ -7,6 +7,7 @@ LOG='/opt/pixelpals/logs/PixelPalRunner.log'
 URL='https://192.168.1.11/pixel/checkin'
 
 start() {
+    cd ${BASE}
     ${VENV_PYTHON} ${BASE}${SCRIPT} --host-name=`/bin/hostname` --log-file=${LOG} --url-checkin='https://192.168.1.11/pixel/checkin'
     return 0
 }
