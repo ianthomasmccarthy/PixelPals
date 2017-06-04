@@ -6,7 +6,7 @@ SCRIPT='run.py'
 
 start() {
     cd ${BASE}
-    ${VENV_PYTHON} ${BASE}${SCRIPT}
+    nohup ${VENV_PYTHON} ${BASE}${SCRIPT} 2>&1 /dev/null &
     return 0
 }
 
