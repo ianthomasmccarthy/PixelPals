@@ -12,9 +12,16 @@ start() {
     return 0
 }
 
+status() {
+    ps -ef | grep '/opt/pixelpals/venv/bin/celery'
+}
+
 case "$1" in
   start)
     start
+    ;;
+  status)
+    status
     ;;
   *)
     echo "Usage: $0 {start}"
