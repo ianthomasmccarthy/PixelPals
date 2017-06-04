@@ -3,9 +3,11 @@
 import requests
 from time import sleep
 import optparse
-import pixelpal
 import logging
 from logging.handlers import TimedRotatingFileHandler
+import sys
+sys.path.append('/opt/pixelpals')
+import pixelpal
 
 
 class PixelPalRunner(object):
