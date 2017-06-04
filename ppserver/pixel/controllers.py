@@ -33,7 +33,9 @@ def checkin():
     return str(pp)
 
 
-@pixel.route('/pixel/time/<int:mins>')
+@pixel.route('/time/<int:mins>')
 def pixtime(mins):
+    app.logger.info('Pixtime endpoint with {m}'.format(m=mins))
     pixel_time.apply_async(args=[mins])
+    app.logger.info('Dropped the task off.')
     return 'good'
