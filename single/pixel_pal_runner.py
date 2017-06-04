@@ -56,9 +56,12 @@ class PixelPalRunner(object):
             else:
                 return False
         udata = str(udata).lower()
+        self.logger.info('Webdata is: {d}'.format(d=udata))
         if hostname.lower() in udata:
+            self.logger.info('check_url is true')
             return True
         else:
+            self.logger.info('check_url is false')
             return False
 
     def main(self):
