@@ -3,9 +3,11 @@
 BASE='/opt/pixelpals/'
 VENV_PYTHON='${BASE}venv/bin/python'
 SCRIPT='single/pixel_pal_runner.py'
+LOG='/opt/pixelpals/logs/PixelPalRunner.log'
+URL='https://192.168.1.11/pixel/checkin'
 
 start() {
-    ${VENV_PYTHON} ${BASE}${SCRIPT} --host=`/bin/hostname`
+    ${VENV_PYTHON} ${BASE}${SCRIPT} --host-name=`/bin/hostname` --log-file=${LOG} --url-checkin='https://192.168.1.11/pixel/checkin'
     return 0
 }
 
