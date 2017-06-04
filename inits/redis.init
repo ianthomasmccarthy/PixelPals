@@ -1,11 +1,11 @@
 #!/bin/bash
 
 BASE='/opt/redis/'
-CONFIG='${BASE}redis.conf'
+CONFIG='redis.conf'
 
 start() {
     cd ${BASE}
-    ${BASE}src/redis-server ${CONFIG}
+    ${BASE}src/redis-server ${BASE}${CONFIG}
     return 0
     }
 
