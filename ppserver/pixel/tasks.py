@@ -1,5 +1,5 @@
 import time
-from ppserver import celery
+from ppserver import celery, app
 import requests
 from random import randint
 # from celery import Celery
@@ -28,8 +28,13 @@ def long_task(self):
 
 @celery.task(bind=True)
 def pixel_time(self, mins):
-    requests.get('http://192.168.1.11/pixel/on')
+    app.logger.info('Running get request to turn on')
+    try:
+        requests.get('http://192.168.1.11/pixel/on')
+    except Exception as e:
+        app.logger.error(e)
     c = 0
+    app.logger.info( 'Delay time is: {t}'.format( t=mins*60 ) )
     while c != (mins * 60):
         c += 1
         i = randint(0, 10)
