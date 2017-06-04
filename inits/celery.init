@@ -2,7 +2,7 @@
 
 BASE='/opt/pixelpals/'
 VENV_PYTHON=${BASE}'venv/bin/python'
-MODULE='ppserver.pixel.tasks'
+MODULE='ppserver.celery'
 LOG=${BASE}'logs/Celery.log'
 CELERY=${BASE}'venv/bin/celery'
 
