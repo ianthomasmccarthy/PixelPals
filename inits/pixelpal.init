@@ -1,9 +1,9 @@
 #!/bin/bash
 
 BASE='/opt/pixelpals/'
-VENV_PYTHON='${BASE}venv/bin/python'
+VENV_PYTHON=${BASE}'venv/bin/python'
 SCRIPT='single/pixel_pal_runner.py'
-LOG='/opt/pixelpals/logs/PixelPalRunner.log'
+LOG=${BASE}'logs/PixelPalRunner.log'
 URL='https://192.168.1.11/pixel/checkin'
 
 start() {

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 BASE='/opt/pixelpals/'
-VENV_PYTHON='${BASE}venv/bin/python'
+VENV_PYTHON=${BASE}'venv/bin/python'
 MODULE='ppserver.pixel.tasks'
-LOG='${BASE}logs/Celery.log'
-CELERY='${BASE}venv/bin/celery'
+LOG=${BASE}'logs/Celery.log'
+CELERY=${BASE}'venv/bin/celery'
 
 start() {
     cd ${BASE}
