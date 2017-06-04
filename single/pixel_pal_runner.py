@@ -20,14 +20,13 @@ class PixelPalRunner(object):
         self.pp       = PixelPal()
 
     def logging_setup(self, log_file):
-        logger = logging.getLogger()
+        self.logger = logging.getLogger()
         handler = TimedRotatingFileHandler(log_file, when="D",
                                            interval=1, backupCount=2)
         formatter = logging.Formatter('%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
         handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.setLevel(logging.INFO)
-        return logger
+        self.logger.addHandler(handler)
+        self.logger.setLevel(logging.INFO)
 
     def get_parser(self):
         return optparse.OptionParser()
@@ -67,7 +66,7 @@ class PixelPalRunner(object):
 
     def main(self):
         self.options()
-        self.logger = self.logging_setup(log_file=self.log_file)
+        self.logging_setup(log_file=self.log_file)
         self.logger.info('Startup PixelPalRunner')
         while True:
             sleep(self.delay)
