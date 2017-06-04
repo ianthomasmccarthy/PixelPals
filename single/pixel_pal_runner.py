@@ -48,6 +48,7 @@ class PixelPalRunner(object):
 
     def check_url(self, url, hostname):
         try:
+            self.logger.info('checking this url: {url}'.format(url=url))
             udata = requests.get(url)
         except Exception as e:
             self.logger.error(e)
