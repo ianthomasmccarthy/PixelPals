@@ -8,7 +8,7 @@ CELERY=${BASE}'venv/bin/celery'
 
 start() {
     cd ${BASE}
-    ${VENV_PYTHON} ${CELERY} -A ${MODULE} worker --logfile ${LOG}
+    nohup ${VENV_PYTHON} ${CELERY} -A ${MODULE} worker --logfile ${LOG} 2>&1 /dev/null
     return 0
 }
 
