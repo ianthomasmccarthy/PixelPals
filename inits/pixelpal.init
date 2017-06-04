@@ -2,7 +2,7 @@
 
 BASE='/opt/pixelpals/'
 VENV_PYTHON='${BASE}venv/bin/python'
-SCRIPT='single_flask_server.py'
+SCRIPT='single/pixel_pal_runner.py'
 
 start() {
     ${VENV_PYTHON} ${BASE}${SCRIPT} --host=`/bin/hostname`

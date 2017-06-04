@@ -18,4 +18,4 @@ class PPFeedback(object):
             self.status = False
 
     def __str__(self):
-        return str(self.feedbackad)
+        return str(self.feedback)

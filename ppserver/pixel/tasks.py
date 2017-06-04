@@ -1,8 +1,8 @@
 import time
 from ppserver import celery
-# from celery import Celery
 import requests
 from random import randint
+# from celery import Celery
 
 
 @celery.task(bind=True)
