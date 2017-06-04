@@ -7,7 +7,7 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 import sys
 sys.path.append('/opt/pixelpals')
-import pixelpal
+from pixelpal import PixelPal
 
 
 class PixelPalRunner(object):
@@ -17,7 +17,7 @@ class PixelPalRunner(object):
         self.delay    = 20
         self.url      = 'https://192.168.1.11/pixel/checkin'
         self.log_file = '/opt/pixelpals/logs/PixelPalRunner.log'
-        self.pp       = pixelpal()
+        self.pp       = PixelPal()
 
     def logging_setup(self, log_file):
         logger = logging.getLogger()
