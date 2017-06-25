@@ -17,5 +17,12 @@ class Config(object):
                   'smbMario',
                   'smbLuigi',
                   'SFRyu',
-                  'SFChunli'
+                  'SFChunli',
+                  'Batman',
+                  'TheJoker',
+                  'HarleyQuinn',
+                  'Kratos',
+                  'Ratchet',
+                  'SFKen',
+                  'SFAguma'
                   ]
