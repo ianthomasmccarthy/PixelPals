@@ -26,3 +26,4 @@ class Config(object):
                   'SFKen',
                   'SFAguma'
                   ]
+    JUST_ON = False

@@ -8,6 +8,7 @@ from logging.handlers import TimedRotatingFileHandler
 import sys
 sys.path.append('/opt/pixelpals')
 from pixelpal import PixelPal
+from config import Config
 
 
 class PixelPalRunner(object):
@@ -70,6 +71,8 @@ class PixelPalRunner(object):
         self.logger.info('Startup PixelPalRunner')
         while True:
             sleep(self.delay)
+            if Config.JUST_ON:
+                if self.pp.state: self.pp.toggle()
             if self.check_url(url=self.url, hostname=self.hostname):
                 if not self.pp.state:
                     self.pp.toggle()
