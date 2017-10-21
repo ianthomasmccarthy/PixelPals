@@ -49,15 +49,4 @@ cp ${INTERFACES_PATH} ${INTERFACES_PATH}1
 sed -i "s/PIXEL_IP/$NETWORK/" ${INTERFACES_PATH}1
 mv /opt/pixelpals/data/interfaces1 /etc/network/interfaces
 sed -i "s/raspberrypi/$PIXEL_PAL/" /etc/hostname
-
-
-
-
-
-
-
-
-
-
-
-
+sed -i "s/raspberrypi/$PIXEL_PAL/" /etc/hosts
