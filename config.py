@@ -24,6 +24,8 @@ class Config(object):
                   'Kratos',
                   'Ratchet',
                   'SFKen',
-                  'SFAguma'
+                  'SFAkuma',
+                  'smwMario',
+                  'smb3TanookiMario',
                   ]
     JUST_ON = False
