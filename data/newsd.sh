@@ -8,6 +8,10 @@ case "$1" in
 				NETWORK=12
 		;;
 
+    'smb3firemario') PIXEL_PAL='smb3FireMario'
+                     NETWORK=15
+        ;;
+
 	'smbmario')    PIXEL_PAL='smbMario'
                    NETWORK=19
         ;;
