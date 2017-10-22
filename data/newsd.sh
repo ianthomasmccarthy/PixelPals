@@ -10,6 +10,7 @@ case "$1" in
 
     'vaultboy') PIXEL_PAL='VaultBoy'
                 NETWORK=13
+        ;;
 
     'smb3firemario') PIXEL_PAL='smb3FireMario'
                      NETWORK=15
