@@ -28,4 +28,4 @@ class Config(object):
                   'smwMario',
                   'smb3TanookiMario',
                   ]
-    JUST_ON = False
+    JUST_ON = True
