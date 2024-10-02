@@ -72,7 +72,7 @@ class PixelPalRunner(object):
         while True:
             sleep(self.delay)
             if Config.JUST_ON:
-                if self.pp.state: self.pp.toggle()
+                if not self.pp.state: self.pp.toggle()
             if self.check_url(url=self.url, hostname=self.hostname):
                 if not self.pp.state:
                     self.pp.toggle()
